@@ -34,7 +34,7 @@ class Utils
         echo "\nRun with : `php go.php -f path/to/filename.csv`\n\n";
     }
 
-    static function getShortRecord($parts): Record|null
+    static function getShortRecord(array $parts): Record|null
     {
         if(count($parts) > 1 && in_array(trim($parts[0]), self::TITLES)) {
             $secondPerson = explode(' ', $parts[1]);
@@ -53,7 +53,7 @@ class Utils
         return null;
     }
 
-    static function getRecord($person)
+    static function getRecord(string $person)
     {
         $personParts = explode(' ', $person);
 
